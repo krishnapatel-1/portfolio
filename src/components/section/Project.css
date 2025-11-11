@@ -80,3 +80,11 @@
 .project-btn:hover {
   background: #0056cc;
 }
+section {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 35px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  backdrop-filter: blur(10px);
+}

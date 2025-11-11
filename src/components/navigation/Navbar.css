@@ -1,57 +1,73 @@
-/* NAVBAR BOX */
-.navbar {
-  width: 100%;
-  height: 60px;
-  background: #ffffff;
-  border-bottom: 1px solid #eaeaea;
-  position: fixed; 
+/* ✅ Sticky Glass Navbar */
+.glass-navbar {
+  position: fixed;
   top: 0;
-  left: 0;
-  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 700px;                 /* ✅ Matches your container */
+  padding: 14px 22px;
+
+  background: rgba(255, 255, 255, 0.40);
+   
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ✅ Flex Layout */
+.navbar-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-/* CENTER CONTENT */
-.navbar-container {
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-/* LOGO */
-.navbar-logo a {
-  text-decoration: none;
+/* ✅ Logo */
+.nav-logo a {
   font-size: 20px;
   font-weight: 700;
-  color: #222;
+  text-decoration: none;
+  color: #111;
 }
 
-/* NAV LINKS */
-.navbar-links {
+/* ✅ Links */
+.nav-links {
   display: flex;
-  gap: 25px;
+  gap: 22px;
   list-style: none;
 }
 
-.navbar-links a {
+.nav-links a {
   text-decoration: none;
-  font-size: 16px;
-  color: #555;
-  transition: 0.3s;
+  color: #333;
+  font-weight: 500;
+  transition: 0.25s;
 }
 
-.navbar-links a:hover {
-  color: #007bff;
+.nav-links a:hover {
+  color: #006eff;
 }
 
-/* ACTIVE PAGE */
+/* ✅ Active page indicator */
 .active-link {
-  font-weight: bold;
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 3px;
+  color: #006eff;
+  font-weight: 600;
+  border-bottom: 2px solid #006eff;
+  padding-bottom: 2px;
+}
+
+/* ✅ Mobile */
+@media (max-width: 750px) {
+  .glass-navbar {
+    max-width: 90%;
+    padding: 12px 18px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
 }
