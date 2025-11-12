@@ -1,4 +1,4 @@
-/* ✅ Sticky Glass Navbar */
+/* 🌑 Sticky Dark Glass Navbar */
 .glass-navbar {
   position: fixed;
   top: 0;
@@ -6,68 +6,109 @@
   transform: translateX(-50%);
 
   width: 100%;
-  max-width: 700px;                 /* ✅ Matches your container */
-  padding: 14px 22px;
+  max-width: 100%;
+  height: 90px;
+  padding: 16px 12%;
 
-  background: rgba(255, 255, 255, 0.40);
-   
-  border: 1px solid rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
   z-index: 999;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 
 /* ✅ Flex Layout */
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  
   align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px; /* ✅ Keeps items close together */
+
+  margin: 0 auto; /* centers within navbar */
 }
 
 /* ✅ Logo */
 .nav-logo a {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   text-decoration: none;
-  color: #111;
+  color: #f5f5f5;
+  transition: 0.3s ease;
+}
+
+.nav-logo a:hover {
+  color: #4da3ff; /* accent hover */
+}
+#logo {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border: white solid 2px;
+  object-fit: cover; /* makes sure the image fills the circle nicely */
 }
 
 /* ✅ Links */
 .nav-links {
   display: flex;
-  gap: 22px;
+  gap: 20px;
+  padding:20px 1px 1px  1px  ;
   list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: 0.25s;
+  color: #ffffff ;
+  
+  font-weight: 548;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #006eff;
+  color: #4da3ff;
 }
 
-/* ✅ Active page indicator */
+/* ✅ Active Link */
 .active-link {
-  color: #006eff;
+  color: #4da3ff;
   font-weight: 600;
-  border-bottom: 2px solid #006eff;
+  border-bottom: 2px solid #4da3ff;
   padding-bottom: 2px;
 }
 
-/* ✅ Mobile */
-@media (max-width: 750px) {
+/* ✅ Tablet */
+@media (max-width: 900px) {
   .glass-navbar {
-    max-width: 90%;
-    padding: 12px 18px;
+    padding: 14px 8%;
   }
 
   .nav-links {
-    gap: 16px;
+    gap: 20px;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 350px) {
+  .glass-navbar {
+    padding: 10px 20px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-logo a {
+    font-size: 18px;
   }
 }

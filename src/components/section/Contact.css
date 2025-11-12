@@ -1,42 +1,32 @@
 .contact-section {
-  padding: 80px 20px;
-  background: #f9faff;
-  text-align: center;
+   text-align: center;
+  color: #fff;
 }
 
 .contact-title {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .contact-subtitle {
-  color: #555;
+  color: #bbb;
   margin-bottom: 40px;
 }
 
 .contact-info p {
   margin: 5px 0;
-  font-size: 16px;
-  color: #444;
-}
-
-.contact-links {
-  margin-top: 10px;
+  color: #ddd;
 }
 
 .contact-links a {
-  margin: 0 10px;
-  color: #007bff;
+  color: #4da3ff;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .contact-links a:hover {
   text-decoration: underline;
 }
 
-/* CONTACT FORM */
 .contact-form {
   max-width: 500px;
   margin: 40px auto 0;
@@ -47,31 +37,21 @@
 
 .contact-form input,
 .contact-form textarea {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
   padding: 12px;
-  border: 1px solid #d3d9ff;
   border-radius: 5px;
-  font-size: 15px;
 }
 
 .contact-form button {
   padding: 12px;
   background: #006eff;
   color: white;
-  font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
-  border: none;
-  transition: 0.3s;
 }
 
 .contact-form button:hover {
   background: #0056cc;
-}
-section {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
-  padding: 35px 25px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-  backdrop-filter: blur(10px);
 }

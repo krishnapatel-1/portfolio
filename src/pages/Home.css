@@ -1,54 +1,59 @@
-/* ✅ Soft Gradient Background */
+/* ✅ Full Dark Background */
 body {
-  margin: 0;
-  background: linear-gradient(135deg, #eef2ff, #fdfdfd);
-  min-height: 100vh;
-  font-family: sans-serif;
+    margin: 0;
+    background: #000;
+    /* PURE BLACK */
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: #f1f1f1;
+    /* Light text */
 }
 
-/* ✅ Main glass container (600px) */
+/* ✅ Main glass container (700px) */
 .container {
-  max-width: 700px;
-  margin: 0px auto 60px;
-  padding: 40px 30px;
+    max-width: 700px;
+    margin: 0px auto 60px;
+    padding: 0;
 
-  background: rgba(255, 255, 255, 0.35);   /* glass */
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+     /* Glass for dark mode */
+  
+     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
-  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
-  backdrop-filter: blur(18px);              /* ✅ GLASS EFFECT */
-  -webkit-backdrop-filter: blur(18px);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-/* ✅ Smooth scroll */
+/* ✅ Smooth Scrolling */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-/* ✅ Responsive */
-@media (max-width: 650px) {
-  .container {
-    padding: 30px 20px;
-    margin-top: 100px;
-    gap: 60px;
-  }
-}
+/* ✅ Section Fade Animation */
 section {
-  opacity: 0;
-  transform: translateY(15px);
-  animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeIn 0.8s ease forwards;
 }
 
+/* ✅ Fade-in keyframe */
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+/* ✅ Responsive Fix */
+@media (max-width: 650px) {
+    .container {
+        padding: 30px 20px;
+        margin-top: 100px;
+        gap: 60px;
+    }
+}
+
+ 
