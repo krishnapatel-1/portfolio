@@ -1,4 +1,6 @@
 import "./About.css";
+import logo from "@/assets/logo.jpg"
+
  
 export default function About() {
   return (
@@ -7,7 +9,7 @@ export default function About() {
 
         {/* LEFT SIDE — IMAGE */}
         <div className="about-image">
-          <img  alt="Profile" />
+          <img src={logo} alt="Profile" />
         </div>
 
         {/* RIGHT SIDE — TEXT */}

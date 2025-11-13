@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import ButtonIcon from "../ButtonIcon";
-import logo from "@/assets/cropped_circle_image.png"
+import logo from "@/assets/logo.jpg"
 
 export default function Navbar() {
   return (

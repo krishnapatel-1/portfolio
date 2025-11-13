@@ -1,14 +1,29 @@
 /* ✅ FULL SCREEN HERO SECTION */
 .hero-section {
-  height: 40vh;
+  height: 50vh; /* You can increase to 80–90vh if you want a larger intro */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* ✅ Align to left */
-  
-  
-  text-align: left; /* ✅ Left text alignment */
+  align-items: flex-start; /* ✅ Align text and image to left */
+  gap: 18px; /* ✅ Adds breathing space between image, title, etc. */
+  padding-top:10px; /* ⭐ ADD THIS */
+  text-align: left;
   color: #eaeaea;
+}
+
+/* ✅ PROFILE IMAGE */
+#profile-img {
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  border: 2px solid white;
+  object-fit: cover;
+  margin-bottom: 10px; /* ✅ Adds small space below image */
+  transition: transform 0.3s ease;
+}
+
+#profile-img:hover {
+  transform: scale(1.05); /* ✅ Small hover animation */
 }
 
 /* ✅ TITLE */
@@ -66,12 +81,20 @@
   box-shadow: 0 0 14px rgba(77, 163, 255, 0.45);
 }
 
+
 /* ✅ Responsive Tweaks */
 @media (max-width: 750px) {
   .hero-section {
     align-items: flex-start;
-    padding: 20px;
+   padding: 30px 10px;/* ⭐ more space on mobile */
+
     height: auto;
+    gap: 14px;
+  }
+
+  #profile-img {
+    width: 65px;
+    height: 65px;
   }
 
   .hero-title {
@@ -87,7 +110,9 @@
   }
 
   .hero-btn {
+     
     font-size: 14px;
     padding: 10px 22px;
   }
 }
+
